@@ -47,11 +47,11 @@
     <table>
         <thead>
             <tr>
-                <th>IDPLU</th>
-                <th>CODIGOEAN</th>
-                <th>DESCRIPCIÓN</th>
-                <th>PRECIO1</th>
-                <th>OBSERVACIONES</th>
+                <th>idPlu</th>
+                <th>CodigoEAN</th>
+                <th>Descripcion</th>
+                <th>Precio1</th>
+                <th>Observaciones</th>
             </tr>
         </thead>
         <tbody id="cuerpo-tabla">
@@ -80,11 +80,11 @@
             registros.forEach(r => {
                 cuerpo.innerHTML += `
                     <tr>
-                        <td>${r.IDPLU}</td>
-                        <td>${r.CODIGOEAN}</td>
-                        <td>${r.DESCRIPCION}</td>
-                        <td>${r.PRECIO1}</td>
-                        <td>${r.OBSERVACIONES}</td>
+                        <td>${r.idPlu}</td>
+                        <td>${r.CodigoEAN}</td>
+                        <td>${r.Descripcion}</td>
+                        <td>${r.Precio1}</td>
+                        <td>${r.Observaciones}</td>
                     </tr>
                 `;
             });
@@ -94,9 +94,9 @@
         function filtrarDatos() {
             const texto = document.getElementById('busqueda').value.toLowerCase();
             const filtrados = datos.filter(r =>
-                r.IDPLU.toLowerCase().includes(texto) ||
-                r.CODIGOEAN.toLowerCase().includes(texto) ||
-                r.DESCRIPCION.toLowerCase().includes(texto)
+                r.idPlu.toLowerCase().includes(texto) ||
+                r.CodigoEAN.toLowerCase().includes(texto) ||
+                r.Descripcion.toLowerCase().includes(texto)
             );
             mostrarDatos(filtrados);
         }
